@@ -6,9 +6,18 @@ def fight(main_character, enemy):
             if enemy.attack()>=main_character.defense:
                 print(f"You got hit for {enemy.attacking_power} damage")
                 main_character.Health -= enemy.attacking_power
-            print(main_character.Health)
+            print(f"You have {main_character.Health} health.")
             print(input("Press any key for next round"))
+        else:
+            print("You missed")
+            if enemy.attack()>=main_character.defense:
+                print(f"You got hit for {enemy.attacking_power} damage")
+                main_character.Health -= enemy.attacking_power
+            print(f"You have {main_character.Health} health.")
+            print(input("Press any key for next round"))
+        if main_character.Health <= 0:
+            break
     if main_character.Health <= 0:
-        print("You have died")
+        return None
     else:
         return main_character.Health

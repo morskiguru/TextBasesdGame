@@ -28,3 +28,26 @@ def intro():
     3) {c}
     """.format(a=aquest, b=bquest, c=cquest)
     return start_text, aquest, bquest, cquest
+
+def choose_quest(q1, q2, q3):
+    while True:
+        quest = input("Chose a number 1, 2 or 3 representing the quest: ")
+        if quest == "1":
+            print(q1)
+            quest = q1
+            bio = "forest"
+            break
+        elif quest == "2":
+            print(q2)
+            quest = q2
+            bio = "city"
+            break
+        elif quest == "3":
+            print(q3)
+            quest = q3
+            bio = "mountain"
+            break
+        else:
+            print("You picked wrongly chose 1, 2 or 3")
+    return quest, bio
+

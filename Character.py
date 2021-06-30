@@ -14,3 +14,5 @@ class Character:
     def attack(self):
         roll=(random.choice(range(1,20)))
         return roll
+
+
